@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sharad Patel | DevOps Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#050505;color:#fff;line-height:1.6}
+nav{position:fixed;top:0;width:100%;background:#0b0b0bcc;padding:15px;display:flex;justify-content:center;gap:30px;backdrop-filter:blur(10px);z-index:10}
+nav a{color:#00ff88;text-decoration:none}
+header{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,#102,#050505)}
+h1{font-size:3rem;color:#00ff88}
+.type{color:#00bfff;font-size:1.4rem}
+.btn{display:inline-block;margin:10px;padding:12px 22px;border:1px solid #00ff88;color:#00ff88;text-decoration:none;border-radius:30px}
+section{padding:80px 10%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#111;border:1px solid #00ff8833;border-radius:12px;padding:20px;transition:.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 0 20px #00ff8855}
+h2{color:#00ff88;margin-bottom:20px}
+footer{text-align:center;padding:30px;background:#111}
+</style>
+</head>
+<body>
+<nav>
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#exp">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+</nav>
+<header>
+<div>
+<h1>Sharad Kumar Patel</h1>
+<div class="type" id="type"></div>
+<p>Associate DevOps Engineer | AWS | Kubernetes | Linux</p>
+<a class="btn" href="#contact">Hire Me</a>
+</div>
+</header>
+
+<section id="about">
+<h2>About</h2>
+<div class="card">
+<p>Associate DevOps Engineer with 1+ year of experience in DevOps and AWS Cloud. Skilled in Docker, Kubernetes, Terraform, Jenkins, Linux, Git, Python and automation.</p>
+</div>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="grid">
+<div class="card">Linux<br>Docker<br>Kubernetes<br>Terraform</div>
+<div class="card">AWS<br>Jenkins<br>Git<br>GitHub</div>
+<div class="card">Python<br>Shell Scripting<br>MySQL</div>
+<div class="card">VMware<br>KVM/QEMU<br>Windows</div>
+</div>
+</section>
+
+<section id="exp">
+<h2>Experience</h2>
+<div class="card">
+<h3>Associate DevOps Engineer</h3>
+<p>ITE Infotech Pvt. Ltd. (Jan 2025 - Present)</p>
+<ul>
+<li>CI/CD using Jenkins</li>
+<li>Docker & Terraform automation</li>
+<li>Linux administration</li>
+<li>AWS deployments & monitoring</li>
+</ul>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card"><h3>AWS Lambda Image Compression</h3><p>Serverless image optimization using Lambda, S3, IAM and Python.</p></div>
+<div class="card"><h3>AWS Web Server</h3><p>Terraform-based EC2, VPC, S3 and IAM deployment.</p></div>
+<div class="card"><h3>2-Tier WordPress Hosting</h3><p>Ubuntu, Apache, PHP and MySQL deployment.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+<p>📧 sharadpatelwdn@gmail.com</p>
+<p>📞 +91 9644701674</p>
+<p>Open to DevOps & Cloud opportunities.</p>
+</div>
+</section>
+
+<footer>© 2026 Sharad Kumar Patel</footer>
+
+<script>
+const words=["DevOps Engineer","AWS Cloud","Linux Administrator","Kubernetes","Terraform","Docker"];
+let i=0,j=0,del=false;
+function t(){
+let w=words[i];
+document.getElementById("type").textContent=w.substring(0,j);
+if(!del){j++;if(j>w.length){del=true;setTimeout(t,1000);return}}
+else{j--;if(j==0){del=false;i=(i+1)%words.length}}
+setTimeout(t,del?50:120);
+}
+t();
+</script>
+</body></html>
